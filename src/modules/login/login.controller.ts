@@ -5,10 +5,11 @@ import { LoginService } from './login.service';
 export class LoginController {
   constructor(private readonly loginService: LoginService) {}
 
-  @Post('/')
+  @Post('save')
   async login(@Body() postData:object){
-    console.log(postData);
+    console.log(1);
     
-    await this.loginService.login(postData)
+    console.log(postData);
+   // await this.loginService.login(postData)
   }
 }
